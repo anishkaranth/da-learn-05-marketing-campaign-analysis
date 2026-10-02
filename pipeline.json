@@ -1,0 +1,35 @@
+{
+ "project": "da-learn-05-marketing-campaign-analysis",
+ "dataset": "UCI Bank Marketing - bank-additional-full.csv (Portuguese bank term-deposit telemarketing, May 2008 - Nov 2010; Kaggle: henriqueyamahata/bank-marketing)",
+ "units": "contacts / calls (no money columns in source)",
+ "raw_files": ["bank-additional-full.csv"],
+ "star": ["fact_contact", "dim_client", "dim_period", "dim_channel", "dim_prev_campaign", "dim_economy"],
+ "core_tables": ["stg_contacts", "cln_contacts", "fact_contact", "dim_client", "dim_period", "dim_channel", "dim_prev_campaign", "dim_economy"],
+ "compare_tables": ["a_kpi_headline", "a_conv_by_segment", "a_conv_by_calls", "a_conv_by_prev_outcome", "a_conv_by_month", "a_conv_by_economy", "dq_assertions", "dq_issues"],
+ "shot_config": {"sql_dialect": "Spark/Databricks SQL (+ DuckDB shims in 00)",
+                 "conversion_definition": "y = 'yes' (client subscribed a term deposit)",
+                 "cost_proxy": "calls_per_conversion = SUM(campaign calls) / conversions (no money columns in source)",
+                 "dedup_rule": "exact duplicate records (all 21 fields) collapsed; contact_id = ROW_NUMBER over all fields",
+                 "leakage_note": "duration is known only after the call: used for descriptive talk-time only",
+                 "sample_rule": "every 600th record in file order (68 contacts, all 21 columns)"},
+ "shot_headline": ["contacts", "conversions", "conversion_rate_pct", "total_calls", "avg_calls_per_client",
+                   "calls_per_conversion", "last_call_talk_hours", "median_last_call_sec", "pct_previously_contacted", "pct_mobile"],
+ "shot_queries": {
+   "conversion_by_age": "SELECT age_band, contacts, conversion_rate_pct, lift FROM a_conv_by_age ORDER BY age_band",
+   "conversion_by_job_top5": "SELECT job, contacts, conversion_rate_pct, calls_per_conversion FROM a_conv_by_job ORDER BY conversion_rate_pct DESC, job LIMIT 5",
+   "conversion_by_calls": "SELECT calls_band, contacts, conversion_rate_pct, calls_per_conversion FROM a_conv_by_calls ORDER BY calls_band",
+   "conversion_by_prev_outcome": "SELECT prev_label, contacts, conversion_rate_pct FROM a_conv_by_prev_outcome ORDER BY prev_label",
+   "conversion_by_channel": "SELECT channel_label, contacts, conversion_rate_pct, calls_per_conversion FROM a_conv_by_channel ORDER BY channel_label",
+   "conversion_by_euribor": "SELECT euribor_band, contacts, conversion_rate_pct FROM a_conv_by_economy ORDER BY euribor_band"
+ },
+ "databricks": {
+   "catalog": "workspace", "schema": "da_learn_05",
+   "title": "Bank marketing campaign analysis",
+   "notebook": "marketing_campaign_pipeline_notebook",
+   "dashboard_file": "marketing_campaign_dashboard.lvdash.json",
+   "dashboard_name": "da-learn-05 Marketing campaign analysis",
+   "staging": {"stg_contacts": {"file": "bank-additional-full.csv",
+     "options": "header => true, sep => ';'",
+     "select": "age, job, marital, education, `default` AS credit_default, housing, loan AS personal_loan, contact AS contact_channel, `month` AS contact_month, day_of_week, duration, campaign, pdays, previous, poutcome, `emp.var.rate` AS emp_var_rate, `cons.price.idx` AS cons_price_idx, `cons.conf.idx` AS cons_conf_idx, euribor3m, `nr.employed` AS nr_employed, y"}}
+ }
+}
