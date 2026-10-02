@@ -1,0 +1,40 @@
+attribute,value,contacts,conversions,conversion_rate_pct,lift,calls_per_conversion
+age_band,1: 17-24,1067,256,23.99,2.13,9.68
+age_band,2: 25-34,13684,1666,12.17,1.08,20.80
+age_band,3: 35-44,13495,1168,8.66,0.77,29.93
+age_band,4: 45-54,8702,752,8.64,0.77,30.56
+age_band,5: 55-64,3566,484,13.57,1.20,19.31
+age_band,6: 65+,662,313,47.28,4.20,4.24
+credit_default,no,32577,4196,12.88,1.14,19.57
+credit_default,unknown,8596,443,5.15,0.46,53.28
+credit_default,yes,3,0,0.00,0.00,
+education,basic 4y,4176,428,10.25,0.91,25.37
+education,basic 6y,2291,188,8.21,0.73,31.16
+education,basic 9y,6045,473,7.82,0.69,32.36
+education,high school,9512,1031,10.84,0.96,23.70
+education,illiterate,18,4,22.22,1.97,10.25
+education,professional course,5240,595,11.35,1.01,22.78
+education,university degree,12164,1669,13.72,1.22,18.68
+education,unknown,1730,251,14.51,1.29,17.90
+housing_loan,no,18615,2025,10.88,0.97,23.91
+housing_loan,unknown,990,107,10.81,0.96,23.69
+housing_loan,yes,21571,2507,11.62,1.03,21.85
+job,admin,10419,1351,12.97,1.15,20.23
+job,blue-collar,9253,638,6.90,0.61,37.11
+job,entrepreneur,1456,124,8.52,0.76,29.77
+job,housemaid,1060,106,10.00,0.89,26.40
+job,management,2924,328,11.22,1.00,22.07
+job,retired,1718,434,25.26,2.24,9.81
+job,self-employed,1421,149,10.49,0.93,25.38
+job,services,3967,323,8.14,0.72,31.79
+job,student,875,275,31.43,2.79,6.69
+job,technician,6739,730,10.83,0.96,23.80
+job,unemployed,1014,144,14.20,1.26,18.06
+job,unknown,330,37,11.21,1.00,23.62
+marital,divorced,4611,476,10.32,0.92,25.32
+marital,married,24921,2531,10.16,0.90,25.34
+marital,single,11564,1620,14.01,1.24,18.09
+marital,unknown,80,12,15.00,1.33,21.25
+personal_loan,no,33938,3849,11.34,1.01,22.59
+personal_loan,unknown,990,107,10.81,0.96,23.69
+personal_loan,yes,6248,683,10.93,0.97,23.81

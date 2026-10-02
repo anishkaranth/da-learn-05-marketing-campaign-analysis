@@ -1,0 +1,11 @@
+check_name,affected_rows
+RI: fact without channel,0
+RI: fact without client profile,0
+RI: fact without economy snapshot,0
+RI: fact without previous-campaign outcome,0
+contacts: credit_default = yes (too rare to analyse),3
+contacts: exact duplicate records removed,12
+contacts: last call duration 0 sec,4
+"contacts: more than 10 calls in campaign (kept, flagged)",869
+contacts: previously contacted but pdays = 999,4110
+contacts: unknown job / marital / education (kept),1996

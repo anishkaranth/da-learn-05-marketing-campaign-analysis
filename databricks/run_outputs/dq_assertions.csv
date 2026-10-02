@@ -1,0 +1,15 @@
+check_name,failed_rows,status
+age between 17 and 98,0,PASS
+at least one call per contact,0,PASS
+every raw month and weekday parsed,0,PASS
+fact_contact.channel_key -> dim_channel,0,PASS
+fact_contact.client_key -> dim_client,0,PASS
+fact_contact.contact_id unique,0,PASS
+fact_contact.economy_key -> dim_economy,0,PASS
+fact_contact.period_key -> dim_period,0,PASS
+fact_contact.prev_key -> dim_prev_campaign,0,PASS
+no previous contacts implies outcome nonexistent,0,PASS
+one call converts better than 6+ calls,0,PASS
+previous success implies previous contacts > 0,0,PASS
+segment conversions add up to total,0,PASS
+target y is yes or no,0,PASS

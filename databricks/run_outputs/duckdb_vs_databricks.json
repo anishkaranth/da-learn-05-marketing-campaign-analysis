@@ -1,0 +1,56 @@
+{
+ "compared_at_ist": "2026-10-02 22:39 IST",
+ "row_counts": [
+   {"table": "stg_contacts", "duckdb_rows": 41188, "databricks_rows": 41188, "match": true},
+   {"table": "cln_contacts", "duckdb_rows": 41176, "databricks_rows": 41176, "match": true},
+   {"table": "fact_contact", "duckdb_rows": 41176, "databricks_rows": 41176, "match": true},
+   {"table": "dim_client", "duckdb_rows": 4270, "databricks_rows": 4270, "match": true},
+   {"table": "dim_period", "duckdb_rows": 50, "databricks_rows": 50, "match": true},
+   {"table": "dim_channel", "duckdb_rows": 2, "databricks_rows": 2, "match": true},
+   {"table": "dim_prev_campaign", "duckdb_rows": 3, "databricks_rows": 3, "match": true},
+   {"table": "dim_economy", "duckdb_rows": 375, "databricks_rows": 375, "match": true}
+  ],
+ "table_comparisons": {
+  "a_kpi_headline": {
+   "rows_databricks": 1,
+   "rows_duckdb": 1,
+   "cell_diffs": []
+  },
+  "a_conv_by_segment": {
+   "rows_databricks": 39,
+   "rows_duckdb": 39,
+   "cell_diffs": []
+  },
+  "a_conv_by_calls": {
+   "rows_databricks": 6,
+   "rows_duckdb": 6,
+   "cell_diffs": []
+  },
+  "a_conv_by_prev_outcome": {
+   "rows_databricks": 3,
+   "rows_duckdb": 3,
+   "cell_diffs": []
+  },
+  "a_conv_by_month": {
+   "rows_databricks": 10,
+   "rows_duckdb": 10,
+   "cell_diffs": []
+  },
+  "a_conv_by_economy": {
+   "rows_databricks": 5,
+   "rows_duckdb": 5,
+   "cell_diffs": []
+  },
+  "dq_assertions": {
+   "rows_databricks": 14,
+   "rows_duckdb": 14,
+   "cell_diffs": []
+  },
+  "dq_issues": {
+   "rows_databricks": 10,
+   "rows_duckdb": 10,
+   "cell_diffs": []
+  }
+ },
+ "all_row_counts_match": true
+}

@@ -1,0 +1,10 @@
+{
+ "dashboard_name": "da-learn-05 Marketing campaign analysis",
+ "dashboard_id": "01f1be840fd01e89a85c5a575239825b",
+ "workspace_path": "/Shared/da-learn-05-marketing-campaign-analysis/da-learn-05 Marketing campaign analysis.lvdash.json",
+ "published": true,
+ "published_revision_time": "2026-10-02T17:09:46.499Z",
+ "data_widgets": 8,
+ "notebook_path": "/Workspace/Shared/da-learn-05-marketing-campaign-analysis/marketing_campaign_pipeline_notebook",
+ "warehouse": "Serverless Starter Warehouse"
+}
