@@ -1,0 +1,4 @@
+prev_key,prev_outcome,prev_label
+1,failure,Previous campaign: no
+2,nonexistent,Not in previous campaign
+3,success,Previous campaign: yes
